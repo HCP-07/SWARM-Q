@@ -1,0 +1,48 @@
+======================================================================
+AD-QPSO MULTI-AGENT SWARM SIMULATION PROFILING REPORT (tottime)
+Scenario: static, Agents: 10, Ticks: 25, Seed: 42
+======================================================================
+
+         4398945 function calls (4398915 primitive calls) in 3.735 seconds
+
+   Ordered by: internal time
+   List reduced from 335 to 35 due to restriction <35>
+
+   ncalls  tottime  percall  cumtime  percall filename:lineno(function)
+   355402    0.829    0.000    1.362    0.000 /Library/Frameworks/Python.framework/Versions/3.11/lib/python3.11/site-packages/numpy/linalg/_linalg.py:2575(norm)
+      512    0.334    0.001    2.302    0.004 /Users/pradyumnareddymagunta/Desktop/Quantum_Leap/src/safety/repair.py:26(repair)
+   145617    0.252    0.000    0.252    0.000 /Library/Frameworks/Python.framework/Versions/3.11/lib/python3.11/site-packages/numpy/_core/_methods.py:99(_clip)
+   355260    0.251    0.000    0.251    0.000 {method 'dot' of 'numpy.ndarray' objects}
+    50963    0.224    0.000    0.673    0.000 /Users/pradyumnareddymagunta/Desktop/Quantum_Leap/src/environment/obstacles.py:91(distance_to)
+     2451    0.213    0.000    0.630    0.000 /Users/pradyumnareddymagunta/Desktop/Quantum_Leap/src/safety/validator.py:114(validate_agent_separation)
+   145617    0.154    0.000    0.642    0.000 /Library/Frameworks/Python.framework/Versions/3.11/lib/python3.11/site-packages/numpy/_core/fromnumeric.py:2241(clip)
+     2720    0.150    0.000    0.360    0.000 /Users/pradyumnareddymagunta/Desktop/Quantum_Leap/src/safety/validator.py:56(validate_kinematics)
+      672    0.121    0.000    0.424    0.001 /Users/pradyumnareddymagunta/Desktop/Quantum_Leap/src/optimization/fitness.py:38(evaluate)
+   137079    0.116    0.000    0.353    0.000 {method 'clip' of 'numpy.generic' objects}
+   355260    0.097    0.000    0.126    0.000 /Library/Frameworks/Python.framework/Versions/3.11/lib/python3.11/site-packages/numpy/linalg/_linalg.py:128(isComplexType)
+   145617    0.086    0.000    0.487    0.000 /Library/Frameworks/Python.framework/Versions/3.11/lib/python3.11/site-packages/numpy/_core/fromnumeric.py:51(_wrapfunc)
+   355264    0.082    0.000    0.082    0.000 {method 'ravel' of 'numpy.ndarray' objects}
+     4220    0.065    0.000    0.084    0.000 /Users/pradyumnareddymagunta/Desktop/Quantum_Leap/src/optimization/qpso.py:18(qpso_update)
+   711612    0.064    0.000    0.064    0.000 {built-in method builtins.issubclass}
+    28444    0.050    0.000    0.169    0.000 /Users/pradyumnareddymagunta/Desktop/Quantum_Leap/src/environment/obstacles.py:50(distance_to)
+     6970    0.048    0.000    0.211    0.000 /Users/pradyumnareddymagunta/Desktop/Quantum_Leap/src/agents/kinematics.py:29(step)
+   355402    0.043    0.000    0.043    0.000 /Library/Frameworks/Python.framework/Versions/3.11/lib/python3.11/site-packages/numpy/linalg/_linalg.py:2571(_norm_dispatcher)
+   355402    0.038    0.000    0.038    0.000 {built-in method numpy.asarray}
+      512    0.037    0.000    0.092    0.000 /Users/pradyumnareddymagunta/Desktop/Quantum_Leap/src/safety/repair.py:141(generate_emergency_stop)
+      672    0.035    0.000    0.272    0.000 /Users/pradyumnareddymagunta/Desktop/Quantum_Leap/src/agents/kinematics.py:45(generate_kinematic_trajectory)
+     2712    0.032    0.000    0.473    0.000 /Users/pradyumnareddymagunta/Desktop/Quantum_Leap/src/safety/validator.py:87(validate_obstacle_clearance)
+     2720    0.031    0.000    0.033    0.000 /Users/pradyumnareddymagunta/Desktop/Quantum_Leap/src/safety/validator.py:39(validate_boundary)
+     6970    0.028    0.000    0.057    0.000 /Users/pradyumnareddymagunta/Desktop/Quantum_Leap/src/agents/kinematics.py:22(compute_acceleration)
+    14962    0.026    0.000    0.026    0.000 {method 'reduce' of 'numpy.ufunc' objects}
+   250070    0.025    0.000    0.025    0.000 {built-in method builtins.len}
+   145617    0.023    0.000    0.023    0.000 /Library/Frameworks/Python.framework/Versions/3.11/lib/python3.11/site-packages/numpy/_core/fromnumeric.py:2236(_clip_dispatcher)
+   150465    0.023    0.000    0.023    0.000 {built-in method builtins.getattr}
+    48863    0.020    0.000    0.020    0.000 {method 'copy' of 'numpy.ndarray' objects}
+    14342    0.020    0.000    0.054    0.000 /Library/Frameworks/Python.framework/Versions/3.11/lib/python3.11/site-packages/numpy/_core/fromnumeric.py:69(_wrapreduction)
+       42    0.018    0.000    3.508    0.084 /Users/pradyumnareddymagunta/Desktop/Quantum_Leap/src/optimization/qpso.py:71(optimize_trajectory)
+      250    0.016    0.000    0.107    0.000 /Users/pradyumnareddymagunta/Desktop/Quantum_Leap/src/agents/agent.py:130(execute_motion_step)
+    14340    0.015    0.000    0.072    0.000 /Library/Frameworks/Python.framework/Versions/3.11/lib/python3.11/site-packages/numpy/_core/fromnumeric.py:2338(sum)
+     2720    0.013    0.000    1.510    0.001 /Users/pradyumnareddymagunta/Desktop/Quantum_Leap/src/safety/validator.py:150(validate_full)
+    14342    0.009    0.000    0.009    0.000 /Library/Frameworks/Python.framework/Versions/3.11/lib/python3.11/site-packages/numpy/_core/fromnumeric.py:70(<dictcomp>)
+
+

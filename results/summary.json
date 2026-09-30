@@ -1,0 +1,14 @@
+{
+  "scenario": "stress",
+  "agents": 15,
+  "ticks": 120,
+  "seed": 42,
+  "real_time_sla_met": false,
+  "hard_safety_preserved": true,
+  "task_completion_pct": 31.82,
+  "mean_latency_ms": 321.588,
+  "p95_latency_ms": 624.178,
+  "p99_latency_ms": 868.1,
+  "max_latency_ms": 1403.359,
+  "total_energy": 247.1
+}

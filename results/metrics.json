@@ -1,0 +1,21 @@
+{
+  "task_completion_rate": 31.818181818181817,
+  "swarm_throughput": 5.833333333333333,
+  "coverage_velocity": 0.6666666666666666,
+  "total_path_length": 376.6212691729697,
+  "average_path_length": 25.10808461153131,
+  "total_energy_consumed": 247.0963362476565,
+  "collision_count": 0,
+  "near_collision_count": 276,
+  "deadlock_count": 0,
+  "average_tick_latency_ms": 321.58793819166664,
+  "p95_latency_ms": 624.17803125,
+  "p99_latency_ms": 868.0997781900003,
+  "max_latency_ms": 1403.358875,
+  "real_time_pass": false,
+  "convergence_iterations": 77,
+  "recovery_time_ticks": 5.0,
+  "communication_robustness_score": 0.8181818181818181,
+  "agent_failure_recovery_rate": 1.0,
+  "final_objective_value": 0.411204766833176
+}
