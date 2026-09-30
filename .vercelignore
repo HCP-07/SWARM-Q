@@ -1,0 +1,13 @@
+tests/
+docs/
+scripts/
+Dockerfile
+docker-compose.yml
+*.zip
+requirements-dev.txt
+streamlit_app.py
+.streamlit/
+__pycache__/
+.pytest_cache/
+.mypy_cache/
+.ruff_cache/
