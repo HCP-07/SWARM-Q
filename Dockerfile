@@ -6,5 +6,4 @@ RUN pip install --no-cache-dir -r requirements.txt
 COPY . .
 RUN useradd -m app && chown -R app /app
 USER app
-EXPOSE 8000
-CMD ["python", "server.py"]
+CMD ["python", "main.py"]

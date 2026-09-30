@@ -1,41 +1,32 @@
-"""Packages clean distribution zip file: adaptive_swarm_intelligence_solution.zip."""
+"""Packages the competition-ready solution into a clean, portable zip archive."""
 
+from __future__ import annotations
 import os
 import zipfile
-from pathlib import Path
-
-ROOT = Path(__file__).resolve().parent.parent
-ZIP_OUT = ROOT / "adaptive_swarm_intelligence_solution.zip"
-
-EXCLUDE_DIRS = {
-    "venv", ".venv", "node_modules", "__pycache__", ".pytest_cache",
-    ".mypy_cache", ".ruff_cache", ".git", ".idea", ".vscode", "scratch"
-}
-EXCLUDE_EXTS = {".pyc", ".pyo", ".pyd", ".DS_Store"}
+import sys
 
 
-def build_clean_zip():
-    print(f"Building clean distribution archive at: {ZIP_OUT}")
-    if ZIP_OUT.exists():
-        ZIP_OUT.unlink()
+def package_solution(output_zip: str = "adaptive_swarm_intelligence_solution.zip") -> None:
+    exclude_dirs = {".git", "venv", ".pytest_cache", "__pycache__", ".vscode", ".idea"}
+    exclude_files = {".DS_Store", output_zip}
 
-    included_count = 0
-    with zipfile.ZipFile(ZIP_OUT, "w", zipfile.ZIP_DEFLATED) as zf:
-        for root, dirs, files in os.walk(ROOT):
-            dirs[:] = [d for d in dirs if d not in EXCLUDE_DIRS]
-            for f in sorted(files):
-                if any(f.endswith(ext) for ext in EXCLUDE_EXTS) or f.startswith("._") or f == ".env":
+    print(f"Packaging project into: {output_zip}...")
+    total_files = 0
+
+    with zipfile.ZipFile(output_zip, "w", zipfile.ZIP_DEFLATED) as zf:
+        for root, dirs, files in os.walk("."):
+            dirs[:] = [d for d in dirs if d not in exclude_dirs]
+            for file in files:
+                if file in exclude_files or file.endswith(".pyc"):
                     continue
-                if f.endswith(".zip"):
-                    continue
-                file_path = Path(root) / f
-                arc_name = file_path.relative_to(ROOT)
-                zf.write(file_path, arc_name)
-                included_count += 1
+                file_path = os.path.join(root, file)
+                archive_name = os.path.relpath(file_path, ".")
+                zf.write(file_path, archive_name)
+                total_files += 1
 
-    size_mb = ZIP_OUT.stat().st_size / (1024 * 1024)
-    print(f"Successfully packaged {included_count} files into {ZIP_OUT} ({size_mb:.2f} MB)")
+    size_mb = os.path.getsize(output_zip) / (1024 * 1024)
+    print(f"Archive created successfully: {output_zip} ({total_files} files, {size_mb:.2f} MB)")
 
 
 if __name__ == "__main__":
-    build_clean_zip()
+    package_solution()

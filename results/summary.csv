@@ -1,0 +1,12 @@
+metric,mean,std,min,max,median
+task_completion_rate,41.111,11.299,26.67,66.67,40.0
+collision_count,0.0,0.0,0.0,0.0,0.0
+average_decision_latency_ms,6.394,2.261,3.561,14.038,5.901
+p95_decision_latency_ms,11.546,9.213,5.036,54.84,9.392
+deadlock_count,30.0,5.686,19.0,41.0,31.0
+deadlock_resolution_rate,81.626,6.252,66.67,93.55,81.535
+average_path_length,40.12,4.84,26.12,49.13,40.945
+total_energy_cost,637.24,67.089,448.7,764.62,644.24
+task_throughput,8.808,2.424,5.71,14.29,8.57
+coverage_velocity,3.756,0.311,3.17,4.31,3.765
+final_objective_value,0.048,0.096,0.0,0.359,0.0

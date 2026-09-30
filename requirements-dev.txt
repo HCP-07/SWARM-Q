@@ -1,6 +1,4 @@
-# ==============================================================================
-# Adaptive Decentralized QPSO (AD-QPSO) - Development and Testing Tooling
-# ==============================================================================
+# Development and Testing Tooling
 -r requirements.txt
 pytest>=8.0.0
 pytest-cov>=4.0.0

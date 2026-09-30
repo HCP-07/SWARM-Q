@@ -1,5 +1,29 @@
-Solver,task_completion_rate,swarm_throughput,coverage_velocity,total_path_length,average_path_length,total_energy_consumed,collision_count,near_collision_count,deadlock_count,average_tick_latency_ms,p95_latency_ms,p99_latency_ms,max_latency_ms,real_time_pass,convergence_iterations,recovery_time_ticks,communication_robustness_score,agent_failure_recovery_rate,final_objective_value
-Greedy Nearest,36.36363636363637,6.666666666666667,0.6,394.63055125208734,26.308703416805823,259.14424432325353,0,72,0,24.920002775,32.276474699999994,40.02806167,60.904375,False,81,5.0,0.8636363636363636,1.0,0.0
-Classical PSO,36.36363636363637,6.666666666666667,0.775,430.4756203369431,28.69837468912954,281.10142262356794,0,111,0,249.186457625,360.9338371999999,395.22003075,1072.400583,False,81,5.0,0.8636363636363636,1.0,0.3870037352094052
-Random Local Search,0.0,0.0,0.6333333333333333,426.0806265714733,28.40537510476489,275.51682359736674,0,73,0,264.69057533333336,382.1268475999999,637.7225693100006,771.810291,False,120,5.0,0.5,0.0,0.0
-Proposed AD-QPSO,31.818181818181817,5.833333333333333,0.6666666666666666,376.6212691729697,25.10808461153131,247.0963362476565,0,276,0,227.38003472499997,326.8347559,486.93251944000025,548.929625,False,77,5.0,0.8181818181818181,1.0,0.411204766833176
+scenario,algorithm,task_completion_rate,collision_count,collision_rate,avg_latency_ms,p95_latency_ms,real_time_pass,deadlock_count,deadlock_resolution_rate,avg_path_length,total_energy,task_throughput,coverage_velocity,final_objective
+open,Greedy Goal,100.0,0,0.0,0.473,0.909,True,0,100.0,29.42,441.35,42.86,7.94,1.2352
+open,Static Priority,93.33,0,0.0,0.458,1.151,True,1,0.0,32.41,490.68,20.0,4.47,1.0871
+open,Non-Adaptive Swarm,93.33,0,0.0,0.923,3.254,True,1,0.0,32.35,489.85,20.0,4.47,1.0876
+open,Proposed Adaptive Swarm,93.33,0,0.0,1.492,3.207,True,4,75.0,38.69,584.47,20.0,4.34,0.9707
+obstacles,Greedy Goal,20.0,0,0.0,1.318,3.132,True,12,0.0,24.01,424.6,4.29,3.33,0.0
+obstacles,Static Priority,26.67,0,0.0,6.009,8.887,True,14,21.43,26.86,459.54,5.71,3.34,0.0
+obstacles,Non-Adaptive Swarm,26.67,0,0.0,6.013,8.779,True,14,21.43,26.86,459.54,5.71,3.34,0.0
+obstacles,Proposed Adaptive Swarm,40.0,0,0.0,6.069,9.116,True,29,86.21,45.66,714.74,8.57,4.0,0.0
+dense,Greedy Goal,100.0,0,0.0,1.707,2.697,True,0,100.0,28.86,865.98,90.91,13.61,1.2402
+dense,Static Priority,93.33,0,0.0,2.595,6.689,True,6,66.67,33.6,1019.38,40.0,7.09,1.0361
+dense,Non-Adaptive Swarm,90.0,0,0.0,2.983,6.896,True,6,50.0,33.52,1021.31,38.57,6.97,0.9862
+dense,Proposed Adaptive Swarm,86.67,0,0.0,3.897,8.33,True,11,81.82,46.42,1404.38,37.14,7.23,0.7707
+dynamic,Greedy Goal,100.0,1,0.266,0.861,1.376,True,0,100.0,29.48,442.18,42.86,7.94,0.2347
+dynamic,Static Priority,93.33,1,0.221,0.998,2.079,True,1,0.0,33.57,508.19,20.0,4.36,0.0767
+dynamic,Non-Adaptive Swarm,93.33,1,0.221,1.092,2.521,True,1,0.0,33.57,508.19,20.0,4.36,0.0767
+dynamic,Proposed Adaptive Swarm,86.67,0,0.0,1.605,2.853,True,6,83.33,37.75,575.12,18.57,4.53,0.8379
+dropout,Greedy Goal,100.0,0,0.0,1.155,2.023,True,0,100.0,29.42,441.35,42.86,7.94,1.2352
+dropout,Static Priority,93.33,0,0.0,0.96,2.474,True,1,0.0,32.41,490.68,20.0,4.47,1.0871
+dropout,Non-Adaptive Swarm,93.33,0,0.0,1.183,2.923,True,1,0.0,32.35,489.85,20.0,4.47,1.0876
+dropout,Proposed Adaptive Swarm,93.33,0,0.0,1.44,3.22,True,3,100.0,39.53,597.93,20.0,4.46,0.9829
+failure,Greedy Goal,100.0,0,0.0,0.801,1.364,True,0,100.0,29.42,441.35,42.86,7.94,1.2352
+failure,Static Priority,93.33,0,0.0,0.801,1.903,True,1,0.0,32.41,490.68,20.0,4.44,1.0871
+failure,Non-Adaptive Swarm,93.33,0,0.0,1.219,3.98,True,1,0.0,32.35,489.85,20.0,4.44,1.0876
+failure,Proposed Adaptive Swarm,93.33,0,0.0,1.013,2.019,True,4,75.0,38.8,586.13,20.0,4.3,0.9697
+combined,Greedy Goal,53.33,1,0.155,0.71,1.094,True,8,25.0,23.51,386.62,11.43,3.31,0.0
+combined,Static Priority,46.67,0,0.0,10.082,25.516,True,8,0.0,23.73,396.7,10.0,3.46,0.3156
+combined,Non-Adaptive Swarm,40.0,0,0.0,4.204,7.722,True,13,38.46,24.57,414.36,8.57,3.43,0.1067
+combined,Proposed Adaptive Swarm,60.0,0,0.0,3.73,6.401,True,22,81.82,36.11,565.88,12.86,3.6,0.2685

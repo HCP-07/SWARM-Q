@@ -1,11 +1,7 @@
-# ==============================================================================
-# Adaptive Decentralized QPSO (AD-QPSO) - Core Runtime Dependencies
-# ==============================================================================
+# Core Runtime Dependencies
+# Adaptive Decentralized Swarm Intelligence for Real-Time Multi-Agent Navigation
 numpy>=1.24,<3
 scipy>=1.10,<2
 pandas>=2.0,<4
-pillow>=9,<13
-pyyaml>=6,<7
-fastapi>=0.100,<1
-uvicorn[standard]>=0.24,<1
+matplotlib>=3.7,<4
 pydantic>=2,<3

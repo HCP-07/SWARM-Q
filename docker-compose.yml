@@ -1,10 +1,6 @@
 services:
-  adso:
+  swarm-simulation:
     build:
       context: .
       dockerfile: Dockerfile
-    command: python server.py
-    ports:
-      - "127.0.0.1:8000:8000"
-    environment:
-      - ADSO_HOST=0.0.0.0
+    command: python main.py --scenario obstacles --agents 15 --ticks 80

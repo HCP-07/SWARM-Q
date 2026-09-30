@@ -1,0 +1,72 @@
+[
+  {
+    "config_id": "A",
+    "config_name": "Greedy Baseline",
+    "description": "Pure Euclidean greedy goal navigation without swarm coordination",
+    "scenario": "obstacles",
+    "task_completion_rate": 20.0,
+    "collision_count": 0,
+    "avg_latency_ms": 0.57,
+    "deadlock_count": 12,
+    "deadlock_resolution_rate": 0.0,
+    "avg_path_length": 24.01,
+    "total_energy": 424.6,
+    "final_objective": 0.0
+  },
+  {
+    "config_id": "B",
+    "config_name": "Non-Adaptive Swarm",
+    "description": "Decentralized swarm heuristic with static, unadapted weights",
+    "scenario": "obstacles",
+    "task_completion_rate": 26.67,
+    "collision_count": 0,
+    "avg_latency_ms": 2.805,
+    "deadlock_count": 14,
+    "deadlock_resolution_rate": 21.43,
+    "avg_path_length": 26.86,
+    "total_energy": 459.54,
+    "final_objective": 0.0
+  },
+  {
+    "config_id": "C",
+    "config_name": "Proposed Adaptive Swarm",
+    "description": "Full adaptive heuristic policy (collision threat, stagnation, clear path)",
+    "scenario": "obstacles",
+    "task_completion_rate": 40.0,
+    "collision_count": 0,
+    "avg_latency_ms": 3.2,
+    "deadlock_count": 29,
+    "deadlock_resolution_rate": 86.21,
+    "avg_path_length": 45.66,
+    "total_energy": 714.74,
+    "final_objective": 0.0
+  },
+  {
+    "config_id": "D",
+    "config_name": "Adaptive + Dynamic Obstacles",
+    "description": "Proposed adaptive swarm under dynamic obstacle intercepts",
+    "scenario": "dynamic",
+    "task_completion_rate": 86.67,
+    "collision_count": 0,
+    "avg_latency_ms": 0.93,
+    "deadlock_count": 6,
+    "deadlock_resolution_rate": 83.33,
+    "avg_path_length": 37.75,
+    "total_energy": 575.12,
+    "final_objective": 0.8379
+  },
+  {
+    "config_id": "E",
+    "config_name": "Adaptive + Agent Failure",
+    "description": "Proposed adaptive swarm operating through mid-mission hardware crash",
+    "scenario": "failure",
+    "task_completion_rate": 93.33,
+    "collision_count": 0,
+    "avg_latency_ms": 0.705,
+    "deadlock_count": 4,
+    "deadlock_resolution_rate": 75.0,
+    "avg_path_length": 38.8,
+    "total_energy": 586.13,
+    "final_objective": 0.9697
+  }
+]
